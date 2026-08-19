@@ -1,0 +1,44 @@
+<%= form_with model: @post do |form| %>
+  <% if @post.errors.any? %>
+    <ul class="errors">
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<section class = "card  p-3 md-3 ">
+  <div class = title>
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title %>
+  </div>
+
+
+
+<div>
+    <%= form.label :start_date, "開始日" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+<div>
+    <%= form.label :end_date, "終了日" %>
+    <%= form.date_field :end_date %>
+  </div>
+
+
+   <div>
+    <%= form.label :all_day, "終日" %>
+    <%= form.check_box :all_day %>
+  </div>
+
+<div>
+    <%= form.label :body, "スケジュールメモ" %>
+    <%= form.text_field :body %>
+  </div>
+
+</section>
+ <%= link_to "キャンセル", posts_path %>
+  <%= form.submit "保存" %>
+ 
+
+  
+<% end %>

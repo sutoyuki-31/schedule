@@ -7,3 +7,4 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+import "./turbo_confirm_controller"
