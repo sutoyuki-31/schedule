@@ -1,0 +1,13 @@
+<%= link_to "一覧に戻る", posts_path %>
+<h4><%= @post.title %> <%= link_to "編集", edit_post_path(@post) %></h4>
+
+<dl class = "card  p-3 md-3 ">
+  <dt>開始日</dt><dd><%= @post.start_date %></dd>
+  <dt>終了日</dt> <dd><%= @post.end_date %></dd>
+  <dt>終日</dt>   <dd><%= @post.all_day  ? "〇" : "　"%></dd>
+  <dt>メモ</dt> <dd><%= @post.body %></dd>
+</dl>
+
+
+
+
